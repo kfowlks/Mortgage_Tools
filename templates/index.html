@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mortgage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.1.0/dist/bulma-divider.min.css"
+    />
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Mortgage Payoff Calculator</h1>
+        <p class="subtitle">
+          Use our mortgage payoff calculator to find out how increasing your
+          monthly payment can shorten your mortgage term. To learn what your
+          monthly payment will be based on your home price, interest and more,
+          use our
+        </p>
+      </div>
+      <br />
+      <div class="card">
+        <div class="card-content">
+          <div class="content">
+            <div class="columns is-desktop">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Home Value</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Home Value" />
+                  </div>
+                  <p class="help"></p>
+                </div>
+
+                <label class="label">Down Payment</label>
+                <div class="field is-grouped">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Value" />
+                  </div>
+                  <div>
+                    <label class="field-label">Or</label>
+                  </div>
+                  <div class="control has-icons-right">
+                    <input class="input" type="text" placeholder="%" />
+                    <span class="icon is-small is-right">
+                      <i class="fas fa-percentage"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label">Type of Mortgage</label>
+                  <div class="select">
+                    <select>
+                      <option>15-year Fixed</option>
+                      <option>30-year Fixed</option>
+                      <option>5/1/ Arm</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Intrest Rate</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Rate" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- TODO Add Insurance and Taxes -->
+              </div>
+              <div class="divider is-vertical">And</div>
+              <div class="column">
+                <div class="tabs is-centered is-large">
+                  <ul>
+                    <li class="is-active"><a>Monthly Payment Breakdown</a></li>
+                    <li><a>Amortization Schedule </a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- have a button POST a click via AJAX -->
+            <button class="button" hx-post="/" hx-swap="outerHTML">
+              Click Me
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/htmx.org@1.8.6"></script>
+  </body>
+</html>
